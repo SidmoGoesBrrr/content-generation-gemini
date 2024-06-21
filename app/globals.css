@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  
+.custom-dialog-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.ToggleGroupItem[data-state="on"] {
+background-color: #2563eb; /* Change to your preferred active color */
+}

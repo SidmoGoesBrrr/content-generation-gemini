@@ -1,0 +1,66 @@
+/* styles/MarkdownRenderer.module.css */
+.markdown {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #1a202c;
+  }
+  
+  .markdown p {
+    margin-bottom: 1em;
+  }
+  
+  .markdown strong {
+    font-weight: bold;
+  }
+  
+  .markdown em {
+    font-style: italic;
+  }
+  
+  .markdown ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .markdown ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .markdown li {
+    margin-bottom: 0.5em;
+  }
+  
+  .markdown blockquote {
+    border-left: 4px solid #1a202c;
+    padding-left: 1em;
+    color: #555;
+    margin: 1em 0;
+  }
+  
+  .markdown code {
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+  
+  .markdown pre {
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-radius: 3px;
+    overflow-x: auto;
+  }
+  
