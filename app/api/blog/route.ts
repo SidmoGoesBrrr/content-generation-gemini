@@ -94,6 +94,11 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Failed to create blog:', error);
-    return new NextResponse('Internal Server Error', { status: 500, body: JSON.stringify({ error: error.message }) });
+    let errorMessage = 'An unknown error occurred';
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

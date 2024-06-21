@@ -21,11 +21,12 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 const categories = ["AIC RMP", "Niti Aayog", "Indian Startups", "Grassroot Level", "Innovative Solution", "Agritech"];
 
 interface Result {
+    message: string;
     blogContent: string;
 }
 
 export default function Home() {
-    const [result, setResult] = useState<{ message: string } | null>(null);
+    const [result, setResult] = useState<Result | null>(null);
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [customPrompt, setCustomPrompt] = useState<string>("");
