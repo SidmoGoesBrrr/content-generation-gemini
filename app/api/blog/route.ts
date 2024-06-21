@@ -82,8 +82,14 @@ export async function POST(request: NextRequest) {
     const responseData = await response.json();
     console.log('Gemini API response data:', JSON.stringify(responseData, null, 2));
 
-    const blogContent = responseData.candidates && responseData.candidates[0] && responseData.candidates[0].content.parts.map(part => part.text).join(' ');
-
+    interface ContentPart {
+      text: string;
+    }
+    
+    const blogContent = responseData.candidates 
+      && responseData.candidates[0] 
+      && responseData.candidates[0].content.parts.map((part: ContentPart) => part.text).join(' ');
+    
     return NextResponse.json({ message: 'Blog created successfully', blogContent });
 
   } catch (error) {
